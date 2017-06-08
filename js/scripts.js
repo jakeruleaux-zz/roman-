@@ -2,97 +2,84 @@ $(document).ready(function() {
   $("form#roman-numeral").submit(function(event) {
     event.preventDefault();
     var number = parseInt($("input#number").val());
-      $("#result").text(singleDigit(number));
-      $("#result").text(doubleDigit(number));
-// var digit = function(number) {
-  //  if ((number !== "0") || (number !== "1") || (number !== "2") || (number !== "3") || (number !== "4") || (number !== "5") || (number !== "6") || (number !== "7") || (number !== "8") || (number !== "9")) {
-        //warning = "please use single digit numeric values"
-
-     //
-    //  if ((number.charAt(0) === "0") || (number.charAt(0) === "1") || (number.charAt(0) === "2") || (number.charAt(0) === "3") || (number.charAt(0) === "4") || (number.charAt(0) === "5") || (number.charAt(0) === "6") || (number.charAt(0) === "7") || (number.charAt(0) === "8") || (number.charAt(0) === "9")) {
-    //   warning = "its a number!"
-    //  }
+    var myNumber = number.toString();
+    var thousands = (myNumber.length)-4;
+    var hundreds = (myNumber.length)-3;
+    var tens = (myNumber.length)-2;
+    var ones = (myNumber.length)-1;
+      $("#result").text(myNumber);
 
 
-    //  var romans = [[9,'IX'],[8,'VII' ],[7, "VII"],
-    //  [6, "VI"],[5, 'V'],[4, 'IV'],[3, "III"],[2, "II"],[1, 'I']];
+    function digit(myNumber) {
+      var result
 
-      //function changeToRome(number) {
-        //if (number === 0) {
-  //         return "";
-  //       }
-  //       for (var index = 0; index < romans.length; index += 1){
-  //           if (number >= romans[index][0]) {
-  //             return result
-  //           }
-  //         }
-  //
-  // };
-    // var roman = function(number)
-// var symbol = ["I", "II", "III", "IV", "V", ""]
-  function singleDigit(number) {
-  var result
-    if (number === 1) {
-      result = "I";
-    }
-    else if (number === 2) {
-     result ="II";
-    }
-    else if (number === 3) {
-      result = "III";
-    }
-    else if (number === 4) {
-      result = "IV";
-    }
-    else if (number === 5) {
-      result = "V";
-    }
-    else if (number === 6) {
-      result = "VI";
-    }
-    else if (number === 7) {
-      result = "VII";
-    }
-    else if (number === 8) {
-      result = "VIII";
-    }
-    else if (number === 9) {
-      result = "IX";
-    }
-    return result;
-  }
-  function doubleDigit(number) {
-    var result
-    if (number === 10) {
-      result = "X";
-    }
-    else if (number === 11) {
-     result ="XI";
-    }
-    else if (number === 12) {
-      result = "XII";
-    }
-    else if (number === 13) {
-      result = "XIII";
-    }
-    else if (number === 14) {
-      result = "XIV";
-    }
-    else if (number === 15) {
-      result = "XV";
-    }
-    else if (number === 16) {
-      result = "XVI";
-    }
-    else if (number === 17) {
-      result = "XVII";
-    }
-    else if (number === 18) {
-      result = "XVIII";
-    }
-    else if (number === 19) {
-      result = "XIX"
-    }
+      if (thousands.charAt(4) === 1) {
+        result = "M";
+      }
+      else if (myNumber.charAt(4) === 2) {
+        result = "MM";
+      }
+      // else (myNumber.charAt(4) === 3) {
+      //   result = "MMM";
+      // }
+    //   else if (number === 10) {
+    //     result = "X";
+    //   }
+    //   else if (number === 11) {
+    //    result ="XI";
+    //   }
+    //   else if (number === 12) {
+    //     result = "XII";
+    //   }
+    //   else if (number === 13) {
+    //     result = "XIII";
+    //   }
+    //   else if (number === 14) {
+    //     result = "XIV";
+    //   }
+    //   else if (number === 15) {
+    //     result = "XV";
+    //   }
+    //   else if (number === 16) {
+    //     result = "XVI";
+    //   }
+    //   else if (number === 17) {
+    //     result = "XVII";
+    //   }
+    //   else if (number === 18) {
+    //     result = "XVIII";
+    //   }
+    //   else if (number === 19) {
+    //     result = "XIX"
+    //   }
+    //
+    // if (number === 1) {
+    //   result = "I";
+    // }
+    // else if (number === 2) {
+    //  result ="II";
+    // }
+    // else if (number === 3) {
+    //   result = "III";
+    // }
+    // else if (number === 4) {
+    //   result = "IV";
+    // }
+    // else if (number === 5) {
+    //   result = "V";
+    // }
+    // else if (number === 6) {
+    //   result = "VI";
+    // }
+    // else if (number === 7) {
+    //   result = "VII";
+    // }
+    // else if (number === 8) {
+    //   result = "VIII";
+    // }
+    // else if (number === 9) {
+    //   result = "IX";
+    // }
     return result;
   }
   });
