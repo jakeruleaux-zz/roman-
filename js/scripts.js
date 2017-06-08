@@ -3,6 +3,7 @@ $(document).ready(function() {
     event.preventDefault();
     var number = parseInt($("input#number").val());
       $("#result").text(singleDigit(number));
+      $("#result").text(doubleDigit(number));
 // var digit = function(number) {
   //  if ((number !== "0") || (number !== "1") || (number !== "2") || (number !== "3") || (number !== "4") || (number !== "5") || (number !== "6") || (number !== "7") || (number !== "8") || (number !== "9")) {
         //warning = "please use single digit numeric values"
@@ -60,6 +61,39 @@ $(document).ready(function() {
     }
     return result;
   }
+  function doubleDigit(number) {
+    var result
+    if (number === 10) {
+      result = "X";
+    }
+    else if (number === 11) {
+     result ="XI";
+    }
+    else if (number === 12) {
+      result = "XII";
+    }
+    else if (number === 13) {
+      result = "XIII";
+    }
+    else if (number === 14) {
+      result = "XIV";
+    }
+    else if (number === 15) {
+      result = "XV";
+    }
+    else if (number === 16) {
+      result = "XVI";
+    }
+    else if (number === 17) {
+      result = "XVII";
+    }
+    else if (number === 18) {
+      result = "XVIII";
+    }
+    else if (number === 19) {
+      result = "XIX"
+    }
+    return result;
+  }
   });
-
 });
