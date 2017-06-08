@@ -2,7 +2,7 @@ $(document).ready(function() {
   $("form#roman-numeral").submit(function(event) {
     event.preventDefault();
     var number = parseInt($("input#number").val());
-
+      $("#result").text(singleDigit(number));
 // var digit = function(number) {
   //  if ((number !== "0") || (number !== "1") || (number !== "2") || (number !== "3") || (number !== "4") || (number !== "5") || (number !== "6") || (number !== "7") || (number !== "8") || (number !== "9")) {
         //warning = "please use single digit numeric values"
@@ -27,40 +27,39 @@ $(document).ready(function() {
   //         }
   //
   // };
+    // var roman = function(number)
+// var symbol = ["I", "II", "III", "IV", "V", ""]
+  function singleDigit(number) {
+  var result
     if (number === 1) {
-      $("#result").text("I")
+      result = "I";
     }
     else if (number === 2) {
-      $("#result").text("II");
+     result ="II";
     }
     else if (number === 3) {
-      $("#result").text("III");
+      result = "III";
     }
     else if (number === 4) {
-      $("#result").text("IV");
+      result = "IV";
     }
     else if (number === 5) {
-      $("#result").text("V");
+      result = "V";
     }
     else if (number === 6) {
-      $("#result").text(VI);
+      result = "VI";
     }
     else if (number === 7) {
-      $("#result").text(VII);
+      result = "VII";
     }
     else if (number === 8) {
-      $("#result").text(VIII);
+      result = "VIII";
     }
     else if (number === 9) {
-      $("#result").text(IX);
+      result = "IX";
     }
-
-
-
-
-
-
-
+    return result;
+  }
   });
 
 });
