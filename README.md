@@ -18,6 +18,9 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 
 ## Specs
 
+* _The Program issues a warning when input cannot be converted into a roman numerals
+Input: "q", 0, .098
+Output: NaN_
 * _The program recognizes a number 1- 10 and converts it into roman numerals
 Input: 8
 Output: VIII _
@@ -30,9 +33,7 @@ Output: CCCXXI_
 * _The program recognizes a number between 1000-3999 and converts it into roman numerals
 Input: 2505
 Output: MMDV_
-* _The Program issues a warning when input cannot be converted into a roman numerals
-Input: "q", 0, .098
-Output: NaN_
+
 ## Known Bugs
 
 _{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
